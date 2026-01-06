@@ -1,0 +1,17 @@
+{
+
+"after_first": "The following is the reasoning instruction for completing this type of question, using 'Who was the first president after Obama? A. Donald Trump B. George Walker Bush C. Joe Biden D. I don't know' as an example: 1. Find the term of office of anchor entity X (Obama) [start, end]. 2. Obtain the complete time series of this relation (presidents in office): the term of office of each president. 3. Filter out all presidents whose start time is greater than or equal to end (Obama). 4. From the results of **all presidents whose start time is greater than or equal to end (Obama)**, select the president with the **earliest start time** as the answer.",
+
+
+"before_last": "The following is the reasoning instruction for completing this type of question. Using 'Who was the last president before Obama?' as an example... A. Donald Trump B. George Walker Bush C. Joe Biden D. I don't know Example: 1. Find the term of office [start, end] of anchor entity X (Obama). 2. Obtain the complete time series of this relation (serving president): the term of office of each president. 3. Filter out all presidents whose end date is <= start (Obama). 4. From the results of **all presidents whose end date is <= start (Obama)**, select the president with the **latest start date** as the answer.",
+
+"before": "The following is the reasoning instruction for completing this type of question. Taking 'Who was the president before Obama?' as an example... For example, to answer \"Who is the president after Obama? A. Donald Trump B. George Walker Bush C. Joe Biden D. I don't know\": 1. Find the time period [start_X, end_X] corresponding to the anchor entity X. 2. For each option, find its corresponding time period [start_i, end_i]. 3. For each option, select the option that satisfies end_i <= start_X (occurred before X)",
+
+
+"after": "The following is the reasoning instruction for completing this type of question. For example, to answer \"Who is the president after Obama? A. Donald Trump B. George Walker Bush C. Joe Biden D. I don't know\": 1. Find the time period [start_X, end_X] corresponding to the anchor entity X. 2. For each option, find its corresponding time period [start_i, end_i]. 3. For each option, select the option that satisfies start_i >= end_X (occurred after X).",
+
+
+"simple_time": "The following is the reasoning instruction for completing this type of question. For example, to answer \"When did Obama become the President of the United States?\" A. 2008 B. 2010 C. 2019 D. I don't know as an example: 1. Find the time period [start_X, end_X] corresponding to the anchor entity X. 2. For each option's given time t, check if it meets the condition start_X <= t <= end_X. 3. For each option, select the option that meets start_X <= t <= end_X.", 
+
+"simple_entity": "The following is the reasoning instruction for completing this type of problem. Taking 'Who was the US president in 2015?' as an example... Taking the example of \"A. Obama B. George W. Bush C. Joe Biden D. I don't know\": 1. Find the anchor time t given in the question. 2. For each option entity, find its corresponding time period [start_i, end_i]. 3. Filter out all presidents whose term of office [start_i, end_i] satisfies start_i <= t <= end_i. 4. From the results of **all presidents whose term of office [start_i, end_i] satisfies start_i <= t <= end_i**, select the corresponding option as the answer."
+}
